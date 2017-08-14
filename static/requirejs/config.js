@@ -13,6 +13,9 @@ require.config({
         'util': {
             deps: ['css!app.css']
         },
+        'jquery': {
+            exports: '$',
+        }
     },
     waitSeconds: 30
 });
