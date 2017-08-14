@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        //模块配置项
+        var hdjs = {
+            //框架目录
+            'base': '.',
+            //上传文件后台地址
+            'uploader': '?s=home/component/uploader',
+            //获取文件列表的后台地址
+            'filesLists': '?s=home/component/filesLists',
+        };
+    </script>
+    <script src="./static/requirejs/require.js"></script>
+    <script src="./static/requirejs/config.js"></script>
+</head>
+<body>
+<button id="bt">颜色</button>
+<script>
+    require(['util'], function (util) {
+        util.colorpicker({
+            element:'#bt',//点击元素id
+            //回调函数
+            callback:function(color)
+            {
+                alert(color);
+            }
+        });
+    })
+</script>
+</body>
+</html>
